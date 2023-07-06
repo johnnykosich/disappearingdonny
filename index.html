@@ -26,14 +26,18 @@
     </style>
 </head>
 <body>
-    <h1>Disappearing Donny</h1>
+    <h1>Welcome to Disappearing Donny's Website!</h1>
     <img id="donny" src="donny.jpg" alt="Disappearing Donny">
     <div id="disappearButton" class="button" onclick="disappear()">Disappear</div>
+    <p id="counter">Donny has disappeared 0 times.</p>
 
     <script>
+        var count = 0;
         function disappear() {
             document.getElementById('donny').style.display = 'none';
             document.getElementById('disappearButton').style.display = 'none';
+            count++;
+            document.getElementById('counter').innerHTML = "Donny has disappeared " + count + " times.";
         }
     </script>
 </body>
