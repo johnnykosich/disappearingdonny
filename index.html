@@ -35,4 +35,13 @@
         var count = localStorage.getItem('disappearCount') || 0;
         document.getElementById('counter').innerHTML = "Donny has disappeared " + count + " times.";
 
-        function disappear
+        function disappear() {
+            document.getElementById('donny').style.display = 'none';
+            document.getElementById('disappearButton').style.display = 'none';
+            count++;
+            localStorage.setItem('disappearCount', count);
+            document.getElementById('counter').innerHTML = "Donny has disappeared " + count + " times.";
+        }
+    </script>
+</body>
+</html>
